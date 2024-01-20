@@ -25,7 +25,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.className} bg-slate-200 scroll-smooth min-h-screen mx-4 sm:mx-36`}
+                className={`${inter.className} bg-slate-200 scroll-smooth min-h-screen flex flex-col mx-4 sm:mx-36`}
             >
                 <header className="p-5 flex items-center gap-6 border-b-2 border-slate-300">
                     <Link className="flex gap-2 items-center mr-auto" href="/">
