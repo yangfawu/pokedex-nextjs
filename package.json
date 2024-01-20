@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write --ignore-path .gitignore \"src/**/*.{ts,tsx,css}\""
+    "format": "npx prettier --write src/"
   },
   "dependencies": {
     "next": "14.1.0",
