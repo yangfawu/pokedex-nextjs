@@ -1,3 +1,4 @@
+import { capitalize } from "lodash"
 import { PokemonResponse } from "./types"
 
 async function getPokemon(name: string) {
@@ -16,9 +17,17 @@ export default async function Page({ params }: Props) {
     const { name } = pokemon
 
     return (
-        <main className="flex-1">
-            <h1>Pokemon - {name}</h1>
-            <code>{JSON.stringify(pokemon, null, 2)}</code>
+        <main className="flex-1 space-y-3">
+            <h1 className="mt-12 text-3xl">{capitalize(name)}</h1>
+            <div className="bg-slate-700 text-white overflow-x-auto">
+                <pre>{JSON.stringify(pokemon, null, 2)}</pre>
+            </div>
         </main>
     )
+}
+
+export async function generateMetadata({ params }: Props) {
+    return {
+        title: `Pokedex - ${capitalize(params.name)}`,
+    }
 }
