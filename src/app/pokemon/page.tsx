@@ -1,12 +1,7 @@
 export default function Page() {
     return (
-        <div>
-            <h1>Pokemon Lookup</h1>
-            <p>Search for your Pokemon here!</p>
-            <div>
-                <input type="text" required/>
-                <button>submit</button>
-            </div>
-        </div>
+        <main className="flex-1">
+            <h1>All Pokemon</h1>
+        </main>
     )
 }

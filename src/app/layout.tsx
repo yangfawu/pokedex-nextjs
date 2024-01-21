@@ -50,6 +50,19 @@ export default function RootLayout({
                     ))}
                 </header>
                 {children}
+                <footer className="p-3 border-t-2 border-slate-300">
+                    <p className="text-xs text-center">
+                        Site created with Next.js. Check it out on{" "}
+                        <Link
+                            className="underline underline-offset-2 hover:font-bold"
+                            href="https://github.com/yangfawu/pokedex-nextjs"
+                            target="_blank"
+                        >
+                            GitHub
+                        </Link>
+                        .
+                    </p>
+                </footer>
             </body>
         </html>
     )
